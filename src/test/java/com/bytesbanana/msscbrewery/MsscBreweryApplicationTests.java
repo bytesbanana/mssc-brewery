@@ -1,4 +1,4 @@
-package com.bytesbanan.msscbrewery;
+package com.bytesbanana.msscbrewery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

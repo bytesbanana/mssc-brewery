@@ -1,4 +1,4 @@
-package com.bytesbanan.msscbrewery;
+package com.bytesbanana.msscbrewery;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

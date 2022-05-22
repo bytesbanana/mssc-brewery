@@ -8,7 +8,7 @@
 		<version>2.7.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bytesbanan</groupId>
+	<groupId>com.bytesbanana</groupId>
 	<artifactId>mssc-brewery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>mssc-brewery</name>
