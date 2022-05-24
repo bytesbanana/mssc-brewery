@@ -1,6 +1,8 @@
-package com.bytesbanana.msscbrewery.services;
+package com.bytesbanana.msscbrewery.services.v2;
 
 import com.bytesbanana.msscbrewery.web.model.BeerDto;
+import com.bytesbanana.msscbrewery.web.model.v2.BeerDtoV2;
+import com.bytesbanana.msscbrewery.web.model.v2.BeerStylesEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -8,21 +10,20 @@ import java.util.UUID;
 
 @Service
 @Slf4j
-@Deprecated
-public class BeerServiceImpl implements BeerService {
+public class BeerServiceV2Impl implements BeerServiceV2 {
     @Override
-    public BeerDto getBeerById(UUID beerId) {
-        return BeerDto.builder()
+    public BeerDtoV2 getBeerById(UUID beerId) {
+        return BeerDtoV2.builder()
                 .id(UUID.randomUUID())
                 .beerName("LEO")
-                .beerStyle("Lager")
+                .beerStyle(BeerStylesEnum.PALE_EL)
                 .build();
     }
 
     @Override
-    public BeerDto saveNewBeer(BeerDto beerDto) {
+    public BeerDtoV2 saveNewBeer(BeerDtoV2 beerDto) {
 
-        return BeerDto.builder()
+        return BeerDtoV2.builder()
                 .id(UUID.randomUUID())
                 .beerStyle(beerDto.getBeerStyle())
                 .beerName(beerDto.getBeerName())
@@ -30,9 +31,9 @@ public class BeerServiceImpl implements BeerService {
     }
 
     @Override
-    public void updateBeer(BeerDto beerDto) {
+    public void updateBeer(BeerDtoV2 beerDto) {
 
-        BeerDto.builder()
+        BeerDtoV2.builder()
                 .beerName(beerDto.getBeerName())
                 .beerStyle(beerDto.getBeerStyle())
                 .id(UUID.randomUUID())
@@ -44,6 +45,5 @@ public class BeerServiceImpl implements BeerService {
     public void deleteBeer(String beerId) {
         log.debug(beerId);
     }
-
 
 }
